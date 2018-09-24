@@ -1,8 +1,8 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
  <html>
  <head>
 	<title>
-		Formulário Válido
+		FormulÃ¡rio VÃ¡lido
 	</title>
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">    
 	  <link rel="stylesheet" href="style.css">    
@@ -14,6 +14,12 @@
 		.helper-text{
 			color: red;
 		}
+		#sexo, #date_container{
+			margin-left: 0.5%;
+		}
+		#sexo_title, #date_title{
+			margin-botton: 0.8%;
+		}
 	  </style>
 	  <script src='jquery-3.3.1.min.js'></script>
 	  <script src='materialize.mim.js'></script>
@@ -21,14 +27,14 @@
  </head>
  <body>
  <div class="container z-depth-3">
-	<h3 class='center'>Formulário</h3>
+	<h3 class='center'>FormulÃ¡rio</h3>
 	<div class="row">
     <form class="col s12" id="register_Form">
       <div class="row">
         <div class="input-field col s12">
           <input id="first_name" type="text" class="validate">
           <label for="first_name">Name*</label>
-	      <span class="helper-text" id='first_Name_Error'>Nome Inválido</span>
+	      <span class="helper-text" id='first_Name_Error'>Nome InvÃ¡lido</span>
         </div>
       </div>
 	    <div class="row s12">
@@ -36,7 +42,7 @@
           <div class="input-field s12">
             <input id="email_inline" type="email" class="validate">
             <label for="email_inline">Email*</label>
-            <span class="helper-text" id='email_Error'>Email Inválido</span>
+            <span class="helper-text" id='email_Error'>Email InvÃ¡lido</span>
           </div>
         </div>
       </div>
@@ -44,7 +50,7 @@
         <div class="input-field col s12">
           <input id="password" type="password" class="validate">
           <label for="password">Password*</label>
-		  <span class="helper-text" id='password_Error'>Senha Inválida</span>
+		  <span class="helper-text" id='password_Error'>Senha InvÃ¡lida</span>
         </div>
       </div>
 	  <div class="row">
@@ -54,7 +60,8 @@
 		  <span class="helper-text" id='password_Retype_Error'>As senhas devem ser iguais</span>
         </div>
       </div>
-	  <div class='row'>
+	  <div class='row' id='sexo'>
+		<h6 id='sexo_title'>Sexo:</h6>
 	  <label>
         <input class="with-gap"  value='m' name="sexo" type="radio"  />
         <span>Masculino</span>
@@ -65,7 +72,8 @@
 		</label>
     </p>
 	</div>
-    <div class="row">
+    <div  id='date_container' class="row">
+		<h6 id='date_title'>Data de Nascimento*:</h6>
         <div class="input-field col s12">
           <input id="data" type="date" class="format">
 		  <span class="helper-text" id='date_Error'>A data de nascimento deve ser menor ou igual a data atual</span>
